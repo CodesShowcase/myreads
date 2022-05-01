@@ -1,0 +1,25 @@
+APP
+
+import { useState } from "react";
+import { Outlet, Link } from "react-router-dom";
+import "./css/Layout.css";
+import Home from "./views/Home.jsx"
+import Search from "./views/Search.jsx"
+import Routes from "./routes/Routes.jsx"
+
+export default function App() {
+  return (
+    <div>
+      <h1>Bookkeeper</h1>
+      <nav
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem",
+        }}
+      >
+        <div className="open-search"><Link to="/search">Search</Link></div>
+      </nav>
+      <Outlet />
+    </div>
+  );
+}
