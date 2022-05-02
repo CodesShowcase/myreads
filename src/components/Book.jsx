@@ -2,7 +2,7 @@ import React from 'react'
 import * as BooksAPI from '../utils/BooksAPI';
 
 function Book ({book}) {
-  const backgroundImage = book.imageLinks.thumbnail ? book.imageLinks.thumbnail : 'url("https://via.placeholder.com/128x193?text=No%20Cover")';
+  const backgroundImage = book.imageLinks ? book.imageLinks.thumbnail : 'url("https://via.placeholder.com/128x193?text=No%20Cover")';
   const title = book.title ? book.title : 'No Title';
   const authors = book.authors ? book.authors.join('\n') : 'Unknown Author';
   // For some reasons JSON Special Chars like \n do not really work...

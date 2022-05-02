@@ -21,7 +21,8 @@ const Search = ({books}) => {
         if (books.filter(mybook => mybook.shelf === 'read').find(mybook => mybook.id === book.id)) {book.shelf = "read"}
       });
       setBookSearch(booksFromSearch);
-  });}
+  });
+  }
 
   useEffect(() => {
     (!query) ? setBookSearch([]) : updateQuery(query);
